@@ -1,10 +1,14 @@
+import sys 
+input = sys.stdin.readline
+
 n = int(input())
-lst = []
 lst = list(map(int, input().split()))
-count = 0
+
+dp = [1]* n
 
 for i in range(n):
-    if lst[i] < lst[i + 1]:
-        count += 1
-        continue
-print(count)
+    for j in range(i):
+        if lst[i] > lst[j]:
+            dp[i] = max(dp[i], dp[j]+1)
+print(max(dp))
+
