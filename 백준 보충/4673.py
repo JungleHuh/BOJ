@@ -1,6 +1,8 @@
 #str로 문자열로 만들고, map으로 int형으로 쪼개어 계산하는 것이 포인트
 def d(n):
-    n + sum(map(int, str(n)))
+    n = n + sum(map(int, str(n)))
+    #재귀인데 return 값 설정안해주는 실수
+    return n
 
 notSelfNum = set()
 
