@@ -1,18 +1,14 @@
-import sys
-input = sys.stdin.readline
-
 n = int(input())
-cnt = n
+i, num = 0, 0
+while n > num:
+    i += 1 #i는 line의 갯수
+    num += i #num은 i번째 line에 속한 원소의 갯수
 
-for i in range(n):
-    word = input()
-    for j in range(0, len(word)- 1):
-        if word[j] == word[j+1]:
-            pass
-        elif word[j] in word[j+1:]:
-            cnt -= 1
-            #연속되지 않는 수 나오면, 바로 끊어주기
-            break
-print(cnt)
+if i % 2 == 0:
+    a = i - (num - n)
+    b = (num -n) + 1
+else:
+    a = (num -n) + 1
+    b = i - (num -n)
 
-            
+print(f'{a}/{b}')
