@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 
 a,b = map(int, input().split())
-line = [i for i in range(a+1)]
+line = [i for i in range(1,a+1)]
 
 for j in range(b):
     c,d = map(int, input().split())
