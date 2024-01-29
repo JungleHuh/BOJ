@@ -1,7 +1,6 @@
 n = input()
 
-for i in n:
-    if i[::1] == i[::-1]:
-        print(1)
-    else:
-        print(0)
+if n[::1] == n[::-1]:
+    print(1)
+else:
+    print(0)
