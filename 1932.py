@@ -7,10 +7,10 @@ for i in range(n):
     dp.append(list(map(int, input().split())))
 
 for a in range(1,n):
-    for b in range(i+1):
+    for b in range(a+1):
         if b == 0:
             dp[a][b] += dp[a-1][b]
-        elif b == 1:
+        elif b == a:
             dp[a][b] += dp[a-1][b-1]
         else:
             dp[a][b] += max(dp[a-1][b-1], dp[a-1][b])
