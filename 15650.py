@@ -5,6 +5,8 @@ def dfs():
     for i in range(1, n+1):
         if visited[i]:
             continue
+        if s and s[-1] > i:
+            continue
         visited[i] = True
         s.append(i)
         dfs()
