@@ -13,7 +13,7 @@ maximum = 0
 def dfs(x,y,temp, count):
     global maximum
     if count == 4:
-        max(maximum, temp)
+        maximum = max(maximum, temp)
         return
     for i in range(4):
         nx = x + dx[i]

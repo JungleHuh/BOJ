@@ -1,22 +1,20 @@
 def dfs():
-    if len(li) == m:
-        print(' '.join(map(str, li)))
+    if len(arr) == m:
+        print(*arr, end = ' ')
+        print()
         return
     for i in s:
-        if li and li[-1] >= i:
-            continue
-        visited[i] = True
-        li.append(i)
+        arr.append(i)
         dfs()
-        li.pop()
-        visited[i] = False
+        arr.pop()
+
+
             
 
 n, m = map(int, input().split())
 s = list(map(int, input().split()))
 s.sort()
-visited = [False] * 10000
-li = []
-i = 0
+arr = []
+
 
 dfs()
